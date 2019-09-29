@@ -1,0 +1,11 @@
+package com.bridgelabz.creational.factorypc;
+
+public class ComputerFactory {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}
