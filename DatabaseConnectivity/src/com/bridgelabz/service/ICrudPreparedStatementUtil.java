@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 import com.bridgelabz.model.Student;
 
-public interface ICrudUtil {
+public interface ICrudPreparedStatementUtil {
 	public String createTable() throws SQLException;
 
 	public Student getValuesInsert();

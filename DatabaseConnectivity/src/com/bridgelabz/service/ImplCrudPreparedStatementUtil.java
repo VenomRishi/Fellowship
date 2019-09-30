@@ -3,30 +3,28 @@ package com.bridgelabz.service;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 import com.bridgelabz.model.Student;
 import com.bridgelabz.repository.DbConnection;
+import com.mysql.jdbc.PreparedStatement;
 
-public class ImplCrudUtil implements ICrudUtil {
+public class ImplCrudPreparedStatementUtil implements ICrudPreparedStatementUtil {
 	static Scanner scanner = new Scanner(System.in);
 	static Connection connection = DbConnection.getConnection();
-	static Statement st = null;
+	static PreparedStatement preparedStatement = null;
 	Student student = new Student();
 
 	@Override
 	public String createTable() throws SQLException {
 		String sql = "CREATE TABLE student" + "(id int primary key," + "name varchar(50)," + "address varchar(100));";
-		st = connection.createStatement();
-		st.executeUpdate(sql);
+		preparedStatement = (PreparedStatement) connection.createStatement();
+		preparedStatement.executeUpdate(sql);
 		return "table created successfully";
-
 	}
 
 	@Override
 	public Student getValuesInsert() {
-
 		System.out.println("Enter id: ");
 		student.setId(scanner.nextInt());
 		System.out.println("Enter name: ");
@@ -39,21 +37,22 @@ public class ImplCrudUtil implements ICrudUtil {
 	@Override
 	public void showRecords() throws SQLException {
 		String query = "select * from student";
-		st = connection.createStatement();
-		ResultSet rs = st.executeQuery(query);
+		preparedStatement = (PreparedStatement) connection.createStatement();
+		ResultSet rs = preparedStatement.executeQuery(query);
 
 		while (rs.next()) {
 			System.out.println("id: " + rs.getInt(1) + " name: " + rs.getString(2) + " address: " + rs.getString(3));
 		}
-
 	}
 
 	@Override
 	public int insertValues(Student student) throws SQLException {
-		String query = "insert into student values(" + student.getId() + ",'" + student.getName() + "','"
-				+ student.getAddress() + "')";
-		st = connection.createStatement();
-		int rowsAffected = st.executeUpdate(query);
+		String query = "insert into student values(?,?,?)";
+		preparedStatement = (PreparedStatement) connection.createStatement();
+		preparedStatement.setInt(1, student.getId());
+		preparedStatement.setString(2, student.getName());
+		preparedStatement.setString(3, student.getAddress());
+		int rowsAffected = preparedStatement.executeUpdate(query);
 		return rowsAffected;
 	}
 
@@ -72,20 +71,14 @@ public class ImplCrudUtil implements ICrudUtil {
 
 	@Override
 	public int updateValues(String query) throws SQLException {
+		preparedStatement = (PreparedStatement) connection.createStatement();
 
-		st = connection.createStatement();
-
-		return st.executeUpdate(query);
+		return preparedStatement.executeUpdate(query);
 	}
 
 	@Override
 	public int deleteValue() throws SQLException {
-		System.out.println("Enter id you want to delete: ");
-		int id = scanner.nextInt();
-		String query = "DELETE FROM student WHERE id='" + id + "'";
-		st = connection.createStatement();
 
-		return st.executeUpdate(query);
+		return 0;
 	}
-
 }
