@@ -62,8 +62,8 @@ public class HashMap<K, V> {
 	 * @return returns hash code index
 	 */
 	public int hashFunction(K key) {
-		int hashCod = (int) key;
-		return hashCod % 11;
+		int index = (int) key;
+		return index % 11;
 	}
 
 	// Returns value for a key
