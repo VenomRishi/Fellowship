@@ -1,8 +1,8 @@
-package com.bridgelabz.preparedstatement.service;
+package com.bridgelabz.preparedstatement.crud.service;
 
 import java.sql.SQLException;
 
-import com.bridgelabz.preparedstatement.model.Student;
+import com.bridgelabz.preparedstatement.crud.model.Student;
 
 public interface ICrudPreparedStmtUtil {
 	public int createTable() throws SQLException;

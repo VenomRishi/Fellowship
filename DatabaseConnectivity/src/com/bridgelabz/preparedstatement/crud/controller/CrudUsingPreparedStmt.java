@@ -8,13 +8,13 @@
  *
  ******************************************************************************/
 
-package com.bridgelabz.preparedstatement.controller;
+package com.bridgelabz.preparedstatement.crud.controller;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.bridgelabz.preparedstatement.model.Student;
-import com.bridgelabz.preparedstatement.service.ImplCrudPreparedStmtUtil;
+import com.bridgelabz.preparedstatement.crud.model.Student;
+import com.bridgelabz.preparedstatement.crud.service.ImplCrudPreparedStmtUtil;
 
 public class CrudUsingPreparedStmt {
 	public static void main(String[] args) throws SQLException {

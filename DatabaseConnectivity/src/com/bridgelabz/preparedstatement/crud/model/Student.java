@@ -1,4 +1,4 @@
-package com.bridgelabz.preparedstatement.model;
+package com.bridgelabz.preparedstatement.crud.model;
 
 public class Student {
 	private int id;

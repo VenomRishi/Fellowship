@@ -1,12 +1,12 @@
-package com.bridgelabz.preparedstatement.service;
+package com.bridgelabz.preparedstatement.crud.service;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.bridgelabz.preparedstatement.model.Student;
-import com.bridgelabz.preparedstatement.repository.DbConnection;
+import com.bridgelabz.preparedstatement.crud.model.Student;
+import com.bridgelabz.preparedstatement.crud.repository.DbConnection;
 import com.mysql.jdbc.PreparedStatement;
 
 public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
