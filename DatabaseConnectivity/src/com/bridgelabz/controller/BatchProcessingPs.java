@@ -31,7 +31,7 @@ public class BatchProcessingPs {
 	}
 
 	private static int[] executeAllQuery() throws SQLException {
-		// String delete = "DELETE FROM student";
+		//String delete = "DELETE FROM student";
 		String query1 = "INSERT INTO student VALUES(?,?,?)";
 		connection = DbConnection.getConnection();
 
