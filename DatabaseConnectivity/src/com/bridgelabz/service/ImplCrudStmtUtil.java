@@ -4,22 +4,21 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
 
 import com.bridgelabz.model.Student;
 import com.bridgelabz.repository.DbConnection;
 
-public class ImplCrudStatementUtil implements ICrudStatementUtil {
+public class ImplCrudStmtUtil implements ICrudStmtUtil {
 	static Connection connection = DbConnection.getConnection();
 	static Statement statement = null;
-	Student student = new Student();
 
 	@Override
-	public String createTable() throws SQLException {
-		String sql = "CREATE TABLE student" + "(id int primary key," + "name varchar(50)," + "address varchar(100));";
+	public int createTable() throws SQLException {
+		String sql = "CREATE TABLE IF NOT EXISTS student" + "(id int primary key," + "name varchar(50),"
+				+ "address varchar(100));";
 		statement = connection.createStatement();
-		statement.executeUpdate(sql);
-		return "table created successfully";
+
+		return statement.executeUpdate(sql);
 
 	}
 
@@ -30,7 +29,7 @@ public class ImplCrudStatementUtil implements ICrudStatementUtil {
 		ResultSet rs = statement.executeQuery(query);
 
 		while (rs.next()) {
-			System.out.println("id: " + rs.getInt(1) + " name: " + rs.getString(2) + " address: " + rs.getString(3));
+			System.out.println("-->id: " + rs.getInt(1) + " name: " + rs.getString(2) + " address: " + rs.getString(3));
 		}
 
 	}
@@ -45,8 +44,9 @@ public class ImplCrudStatementUtil implements ICrudStatementUtil {
 	}
 
 	@Override
-	public int updateValues(String query) throws SQLException {
-
+	public int updateValues(int id, Student student) throws SQLException {
+		String query = "UPDATE student SET name='" + student.getName() + "', address='" + student.getAddress()
+				+ "' WHERE id=" + id + "";
 		statement = connection.createStatement();
 
 		return statement.executeUpdate(query);
@@ -56,15 +56,6 @@ public class ImplCrudStatementUtil implements ICrudStatementUtil {
 	public int deleteValue(int id) throws SQLException {
 
 		String query = "DELETE FROM student WHERE id='" + id + "'";
-		statement = connection.createStatement();
-
-		return statement.executeUpdate(query);
-	}
-
-	@Override
-	public int updateValues(int id) throws SQLException {
-		String query = "UPDATE student SET name='" + student.getName() + "', address='" + student.getAddress()
-				+ "' WHERE id=" + id + "";
 		statement = connection.createStatement();
 
 		return statement.executeUpdate(query);
