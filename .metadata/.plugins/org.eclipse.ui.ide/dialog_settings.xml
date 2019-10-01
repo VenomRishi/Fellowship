@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/admin1/eclipse-workspace/BridgeLabzFellowshipPrograms"/>
 		<item value="/home/admin1/eclipse-workspace/CliniqueProject"/>
 		<item value="/home/admin1/eclipse-workspace/DesignPatterns"/>
 	</list>
@@ -42,6 +43,6 @@
 	</section>
 	<section name="ResourceNavigator">
 		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
-		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1567495326723"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value=""/>
 	</section>
 </section>

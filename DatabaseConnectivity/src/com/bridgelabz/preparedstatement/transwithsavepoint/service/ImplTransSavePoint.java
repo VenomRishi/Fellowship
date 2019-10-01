@@ -49,6 +49,8 @@ public class ImplTransSavePoint implements ITransSavePoint {
 
 		// Commit statement
 		connection.commit();
+		
+		connection.setAutoCommit(true);
 
 	}
 
