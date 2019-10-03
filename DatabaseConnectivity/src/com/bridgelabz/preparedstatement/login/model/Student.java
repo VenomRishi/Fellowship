@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Program is written for model of student table of database
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   01-10-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.preparedstatement.login.model;
 
 public class Student {

@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Class can establishes connection with database using jdbc
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   01-10-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.statement.batchprocessing.repository;
 
 import java.sql.Connection;
