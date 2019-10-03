@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: Program is written for design pattern of Proxy
+ *  		 instance of class
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.structural.proxy;
 
 public class ProxyMain {

@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: This class can tell any hardware computer requires peripheral.
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.factorypc;
 
 public abstract class Computer {

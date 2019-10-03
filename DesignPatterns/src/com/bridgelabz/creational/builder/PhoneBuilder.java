@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: This is model class which contains all the getters and setters
+ *  		 for phone builder
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.builder;
 
 public class PhoneBuilder {

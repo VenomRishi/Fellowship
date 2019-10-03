@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Program is written for design pattern of Singleton Thread safe
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.singleton.threadsafe;
 
 public class ThreadMain {

@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: Implementation of Item Element interface and this class will also
+ *  	 	 tells the item element is required for fruit class
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.behavioral.visitor;
 
 public class Fruit implements IItemElement {

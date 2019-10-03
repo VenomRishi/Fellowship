@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: Implementation of Subject and this class tells the topic for 
+ *  		 subject
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.behavioral.observer;
 
 import java.util.ArrayList;

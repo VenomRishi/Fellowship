@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Class can tell the every component prices
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.structural.composite;
 
 import java.util.ArrayList;

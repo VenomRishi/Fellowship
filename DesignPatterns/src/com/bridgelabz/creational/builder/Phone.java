@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: This class is having the phone functionality which common phone 
+ *  	   	 required
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.builder;
 
 public class Phone {
@@ -23,7 +33,5 @@ public class Phone {
 		return "Phone [os=" + os + ", ram=" + ram + ", storage=" + storage + ", processor=" + processor
 				+ ", screenSize=" + screenSize + ", battery=" + battery + "]";
 	}
-	
-	
 
 }

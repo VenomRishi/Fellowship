@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: This class has all getters and setters required for book
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.prototype;
 
 public class Book {

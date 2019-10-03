@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Implementation of Item Element which is used in book class
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.behavioral.visitor;
 
 public class Book implements IItemElement {

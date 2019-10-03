@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: This class maintains all the books
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.creational.prototype;
 
 import java.util.ArrayList;

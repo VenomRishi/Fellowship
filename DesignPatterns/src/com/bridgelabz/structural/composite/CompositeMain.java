@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Program is written for design pattern of Composite
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.structural.composite;
 
 public class CompositeMain {

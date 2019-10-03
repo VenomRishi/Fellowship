@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: This class will tell how much volt is required for specific adapter
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.structural.adaptersocket;
 
 public class Volt {

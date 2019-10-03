@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Implementation of Socket using this class and creating adapter
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.structural.adaptersocket;
 
 public class ImplSocketClassAdapter extends Socket implements ISocketAdapter {

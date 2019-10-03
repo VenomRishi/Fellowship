@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  Purpose: Implementation of Observer and this class also tells the
+ *  		 subscriber details
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   30-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.behavioral.observer;
 
 public class MyTopicSubscriber implements IObserver {
