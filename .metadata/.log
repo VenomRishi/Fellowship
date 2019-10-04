@@ -435,3 +435,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.egit.core 1 0 2019-10-03 17:48:09.334
 !MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2019-10-04 08:42:30.286 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=11.0.4
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-04 08:44:03.179
+!MESSAGE Using Apache MINA sshd as ssh client.
