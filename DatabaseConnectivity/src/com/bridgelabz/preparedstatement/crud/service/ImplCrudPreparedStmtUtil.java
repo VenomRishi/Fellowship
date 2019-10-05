@@ -23,6 +23,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 	static Connection connection = DbConnection.getConnection();
 	static PreparedStatement preparedStatement = null;
 
+	/**
+	 * Purpose: method for creating table into database using prepared statement
+	 */
 	@Override
 	public int createTable() throws SQLException {
 		String sql = "CREATE TABLE IF NOT EXISTS student" + "(id int primary key," + "name varchar(50),"
@@ -32,6 +35,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 		return preparedStatement.executeUpdate();
 	}
 
+	/**
+	 * Purpose: method for showing records from database using prepared statement
+	 */
 	@Override
 	public void showRecords() throws SQLException {
 		String query = "select * from student";
@@ -43,6 +49,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 		}
 	}
 
+	/**
+	 * Purpose: method for inserting values into database using prepared statement
+	 */
 	@Override
 	public int insertValues(Student student) throws SQLException {
 		String query = "insert into student values(?,?,?)";
@@ -54,6 +63,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 		return preparedStatement.executeUpdate();
 	}
 
+	/**
+	 * Purpose: method for updating values into database using prepared statement
+	 */
 	@Override
 	public int updateValues(int id, Student student) throws SQLException {
 		String query = "UPDATE student SET name='" + student.getName() + "', address='" + student.getAddress()
@@ -63,6 +75,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 		return preparedStatement.executeUpdate();
 	}
 
+	/**
+	 * Purpose: method for deleting values into database using prepared statement
+	 */
 	@Override
 	public int deleteValue(int id) throws SQLException {
 		String query = "DELETE FROM student WHERE id='" + id + "'";

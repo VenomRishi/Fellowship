@@ -21,6 +21,9 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 	static Connection connection = DbConnection.getConnection();
 	static Statement statement = null;
 
+	/**
+	 * Purpose: method for creating table into database using statement
+	 */
 	@Override
 	public int createTable() throws SQLException {
 		String sql = "CREATE TABLE IF NOT EXISTS student" + "(id int primary key," + "name varchar(50),"
@@ -31,6 +34,9 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 
 	}
 
+	/**
+	 * Purpose: method for showing table from database using statement
+	 */
 	@Override
 	public void showRecords() throws SQLException {
 		String query = "select * from student";
@@ -43,6 +49,9 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 
 	}
 
+	/**
+	 * Purpose: method for inserting table into database using statement
+	 */
 	@Override
 	public int insertValues(Student student) throws SQLException {
 		String query = "insert into student values(" + student.getId() + ",'" + student.getName() + "','"
@@ -52,6 +61,9 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 		return rowsAffected;
 	}
 
+	/**
+	 * Purpose: method for updating table into database using statement
+	 */
 	@Override
 	public int updateValues(int id, Student student) throws SQLException {
 		String query = "UPDATE student SET name='" + student.getName() + "', address='" + student.getAddress()
@@ -60,7 +72,9 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 
 		return statement.executeUpdate(query);
 	}
-
+	/**
+	 * Purpose: method for deleting table into database using statement
+	 */
 	@Override
 	public int deleteValue(int id) throws SQLException {
 

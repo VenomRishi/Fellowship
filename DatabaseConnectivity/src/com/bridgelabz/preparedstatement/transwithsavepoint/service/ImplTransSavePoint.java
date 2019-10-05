@@ -20,6 +20,10 @@ public class ImplTransSavePoint implements ITransSavePoint {
 	private static Connection connection = null;
 	private static PreparedStatement preparedStatement = null;
 
+	/**
+	 * Purpose: method for inserting records into database using transaction with
+	 * save point method and also it uses prepared statement
+	 */
 	@Override
 	public void performTransaction() throws SQLException {
 		String query1 = "INSERT INTO student VALUES(?,?,?)";
@@ -58,7 +62,7 @@ public class ImplTransSavePoint implements ITransSavePoint {
 
 		// Commit statement
 		connection.commit();
-		
+
 		connection.setAutoCommit(true);
 
 	}

@@ -7,7 +7,6 @@
  *
  ******************************************************************************/
 
-
 package com.bridgelabz.callable.service;
 
 import java.sql.Connection;
@@ -25,14 +24,21 @@ public class ImplCrudCallableStmtUtil implements ICrudCallableStmtUtil {
 	static Connection connection = DbConnection.getConnection();
 	static CallableStatement callableStatement = null;
 
+	/**
+	 * Purpose: method for creating new table into database
+	 */
 	@Override
 	public int createTable() throws SQLException {
-		String sql = "CREATE TABLE IF NOT EXISTS student" + "(id int primary key," + "name varchar(50)," + "address varchar(100));";
+		String sql = "CREATE TABLE IF NOT EXISTS student" + "(id int primary key," + "name varchar(50),"
+				+ "address varchar(100));";
 		Statement statement = connection.createStatement();
 		return statement.executeUpdate(sql);
 
 	}
 
+	/**
+	 * Purpose: method for inserting values into database using callable statement
+	 */
 	@Override
 	public int insertValues(Student student) throws SQLException {
 		callableStatement = (CallableStatement) connection.prepareCall("call insert_student(?,?,?)");
@@ -42,6 +48,9 @@ public class ImplCrudCallableStmtUtil implements ICrudCallableStmtUtil {
 		return callableStatement.executeUpdate();
 	}
 
+	/**
+	 * Purpose: method for updating values into database using callable statement
+	 */
 	@Override
 	public int updateValues(int id, Student student) throws SQLException {
 		callableStatement = (CallableStatement) connection.prepareCall("call update_student(?,?,?)");
@@ -51,6 +60,9 @@ public class ImplCrudCallableStmtUtil implements ICrudCallableStmtUtil {
 		return callableStatement.executeUpdate();
 	}
 
+	/**
+	 * Purpose: method for deleting values into database using callable statement
+	 */
 	@Override
 	public int deleteValue(int id) throws SQLException {
 		callableStatement = (CallableStatement) connection.prepareCall("call delete_student(?)");
@@ -59,6 +71,9 @@ public class ImplCrudCallableStmtUtil implements ICrudCallableStmtUtil {
 
 	}
 
+	/**
+	 * Purpose: method for showing records from database using callable statementF
+	 */
 	@Override
 	public void showRecords() throws SQLException {
 

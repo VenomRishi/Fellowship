@@ -21,6 +21,9 @@ public class ImplLoginUtil implements ILoginUtil {
 	static Connection connection = DbConnection.getConnection();
 	static PreparedStatement preparedStatement = null;
 
+	/**
+	 * Purpose: method for checking user is there in database or not
+	 */
 	@Override
 	public Student checkUser(int id, String name) throws SQLException {
 		Student student = new Student();
@@ -39,6 +42,9 @@ public class ImplLoginUtil implements ILoginUtil {
 		return student;
 	}
 
+	/**
+	 * Purpose: method for inserting new user into database
+	 */
 	@Override
 	public int registerUser(Student student) throws SQLException {
 

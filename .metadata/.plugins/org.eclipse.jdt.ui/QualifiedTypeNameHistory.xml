@@ -38,4 +38,5 @@
     <fullyQualifiedTypeName name="com.bridgelabz.service.ImplTransSavePoint"/>
     <fullyQualifiedTypeName name="java.sql.Savepoint"/>
     <fullyQualifiedTypeName name="com.bridgelabz.statement.service.ImplCrudStmtUtil"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
