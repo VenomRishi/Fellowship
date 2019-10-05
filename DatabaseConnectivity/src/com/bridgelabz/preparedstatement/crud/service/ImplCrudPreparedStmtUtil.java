@@ -86,4 +86,13 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 		preparedStatement.setInt(1, id);
 		return preparedStatement.executeUpdate();
 	}
+
+	@Override
+	public void closeCon() throws SQLException {
+		// TODO Auto-generated method stub
+		scanner.close();
+		preparedStatement.close();
+		connection.close();
+
+	}
 }

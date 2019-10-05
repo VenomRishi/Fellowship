@@ -72,6 +72,7 @@ public class CrudUsingPreparedStmt {
 			case 6:
 				isExit = true;
 				System.out.println("Thank you");
+				util.closeCon();
 				break;
 
 			}

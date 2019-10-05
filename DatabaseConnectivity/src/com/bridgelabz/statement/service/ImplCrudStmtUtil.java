@@ -44,7 +44,8 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 		ResultSet rs = statement.executeQuery(query);
 
 		while (rs.next()) {
-			System.out.println("-->id: " + rs.getInt(1) + " name: " + rs.getString(2) + " address: " + rs.getString(3));
+			System.out.println(
+					"-->id: " + rs.getInt("id") + " name: " + rs.getString("name") + " address: " + rs.getString(3));
 		}
 
 	}
@@ -57,8 +58,7 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 		String query = "insert into student values(" + student.getId() + ",'" + student.getName() + "','"
 				+ student.getAddress() + "')";
 		statement = connection.createStatement();
-		int rowsAffected = statement.executeUpdate(query);
-		return rowsAffected;
+		return statement.executeUpdate(query);
 	}
 
 	/**
@@ -72,6 +72,7 @@ public class ImplCrudStmtUtil implements ICrudStmtUtil {
 
 		return statement.executeUpdate(query);
 	}
+
 	/**
 	 * Purpose: method for deleting table into database using statement
 	 */

@@ -1,0 +1,16 @@
+for creating new table
+
+create table user(
+	id int NOT NULL AUTO_INCREMENT,
+	dateregister TIMESTAMP,
+	fname VARCHAR(30),
+	lname VARCHAR(30),
+	username VARCHAR(100),
+	password VARCHAR(30),
+	dateupdated VARCHAR(30),
+	PRIMARY KEY(id)
+);
+
+for inserting record
+
+INSERT INTO user (fname,lname,username,password,dateupdated) VALUES('rishi','mhatre','mhatrerishikesh@gmail.com','admin',now());

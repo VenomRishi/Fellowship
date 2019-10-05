@@ -23,4 +23,6 @@ public interface ICrudPreparedStmtUtil {
 	public int updateValues(int id, Student student) throws SQLException;
 
 	public int deleteValue(int id) throws SQLException;
+	
+	public void closeCon() throws SQLException;
 }

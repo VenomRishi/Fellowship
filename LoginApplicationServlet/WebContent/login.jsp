@@ -8,10 +8,9 @@
 </head>
 <body>
 
-	<form action="login">
-		username: <input type="text" name="username"
-			required="username is required"><br> password: <Input
-			type="text" name="password" required="password is required"><br>
+	<form action="login" method="post">
+		username: <input type="text" name="username" required><br>
+		password: <Input type="password" name="password" required><br>
 		<input type="submit" value="login">
 	</form>
 </body>
