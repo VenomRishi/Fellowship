@@ -6,20 +6,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome Page</title>
+<link rel="icon" href="img/icon/favicon-16x16.png" type="image"
+	sizes="16x16">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-	<%
-		response.setHeader("Cache-Control", "no-cache, no-store, must-validate");//HTTP 1.1
-		response.setHeader("Pragma", "no-cache");//HTTP 1.0
-		response.setHeader("Expires", "0");//for proxy server
-		if (session.getAttribute("username") == null)
-			response.sendRedirect("login.jsp");
-	%>
-	Welcome: ${username}
+	<div class="container">
+		<div class="d-flex justify-content-center">
+			<div class="card bg-light text-dark"
+				style="width: 600px; margin: 20px;">
+				<%
+					response.setHeader("Cache-Control", "no-cache, no-store, must-validate");//HTTP 1.1
+					response.setHeader("Pragma", "no-cache");//HTTP 1.0
+					response.setHeader("Expires", "0");//for proxy server
+					if (session.getAttribute("username") == null)
+						response.sendRedirect("login.jsp");
+				%>
+				<img alt="welcome_image_not_available" src="img/welcome.jpg">
+				<p class="h1">Welcome: ${username}
+				<p>
+				<form action="Logout">
+					<div class="text-center" style="margin-bottom: 20px;">
+						<input type="submit" class="btn btn-primary" value="log out">
+					</div>
+				</form>
 
-	<form action="logout">
-		<input type="submit" value="log out">
-	</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
 </body>
 </html>
