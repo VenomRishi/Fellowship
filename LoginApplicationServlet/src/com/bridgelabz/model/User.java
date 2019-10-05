@@ -1,4 +1,14 @@
+/******************************************************************************
+ *  Purpose: Program is written for model of user table of database
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   05-10-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.model;
+
 
 public class User {
 

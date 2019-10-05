@@ -68,10 +68,11 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 	 */
 	@Override
 	public int updateValues(int id, Student student) throws SQLException {
-		String query = "UPDATE student SET name='" + student.getName() + "', address='" + student.getAddress()
-				+ "' WHERE id=" + id + "";
+		String query = "UPDATE student SET name=?, address=? WHERE id=?";
 		preparedStatement = (PreparedStatement) connection.prepareStatement(query);
-
+		preparedStatement.setString(1, student.getName());
+		preparedStatement.setString(2, student.getAddress());
+		preparedStatement.setInt(3, id);
 		return preparedStatement.executeUpdate();
 	}
 
@@ -80,9 +81,9 @@ public class ImplCrudPreparedStmtUtil implements ICrudPreparedStmtUtil {
 	 */
 	@Override
 	public int deleteValue(int id) throws SQLException {
-		String query = "DELETE FROM student WHERE id='" + id + "'";
+		String query = "DELETE FROM student WHERE id=?";
 		preparedStatement = (PreparedStatement) connection.prepareStatement(query);
-
+		preparedStatement.setInt(1, id);
 		return preparedStatement.executeUpdate();
 	}
 }
