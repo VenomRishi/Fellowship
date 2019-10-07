@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
+<title>Forgot Password</title>
 <link rel="icon" href="img/icon/favicon-16x16.png" type="image"
 	sizes="16x16">
 <link rel="stylesheet"
@@ -18,7 +18,6 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<div class="container" style="margin-top: 20px;">
 		<div class="d-flex justify-content-center ">
 			<div class="card bg-light text-dark" style="width: 300px">
@@ -26,20 +25,13 @@
 					style="width: 100%; height: 240px">
 				<div class="card-body">
 					<h4 class="card-title">Login</h4>
-					<form action="login" method="post">
-						<input class="form-control" type="text" name="username" required
-							placeholder="Username"><br> <Input
-							class="form-control" type="password" name="password" required
-							placeholder="Password"><br>
+					<form action="forgotpassword" method="post">
+						<input type="text" class="form-control" name="email" required
+							placeholder="Email">
 
 						<div class="text-center">
-							<input type="submit" value="Login" class="btn btn-primary">
-							<a href="register.jsp">Create new Account</a>
-							<br>
-							<br>
-							<a href="forgotpassword.jsp">forgot password?</a>
+							<input type="submit" value="send link on email" class="btn btn-primary">
 						</div>
-
 					</form>
 				</div>
 			</div>
