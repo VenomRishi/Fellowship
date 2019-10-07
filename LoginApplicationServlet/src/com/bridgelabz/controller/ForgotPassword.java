@@ -30,7 +30,8 @@ public class ForgotPassword extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String email = request.getParameter("email");
+		//String email = request.getParameter("email");
+		
 	}
 
 }
