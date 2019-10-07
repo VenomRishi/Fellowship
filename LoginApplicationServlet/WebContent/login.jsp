@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 <link rel="icon" href="img/icon/favicon-16x16.png" type="image"
 	sizes="16x16">
@@ -26,14 +27,16 @@
 				<div class="card-body">
 					<h4 class="card-title">Login</h4>
 					<form action="login" method="post">
-						<input class="form-control" type="text" name="username" required placeholder="Username"><br> 
-						<Input class="form-control" type="password" name="password" required placeholder="Password"><br>
-						 
+						<input class="form-control" type="text" name="username" required
+							placeholder="Username"><br> <Input
+							class="form-control" type="password" name="password" required
+							placeholder="Password"><br>
+
 						<div class="text-center">
 							<input type="submit" value="Login" class="btn btn-primary">
 							<a href="register.jsp">Create new Account</a>
 						</div>
- 						
+
 					</form>
 				</div>
 			</div>

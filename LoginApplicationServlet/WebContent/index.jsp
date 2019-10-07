@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome Page</title>
 <link rel="icon" href="img/icon/favicon-16x16.png" type="image"
 	sizes="16x16">
