@@ -24,12 +24,12 @@
 				<img class="card-img-top" src="img/img_avatar1.png" alt="Card image"
 					style="width: 100%; height: 240px">
 				<div class="card-body">
-					<h4 class="card-title">Login</h4>
-					<form action="forgotpassword" method="post">
+					<h4 class="card-title">Forgot password</h4>
+					<form action="forgotpassword">
 						<input type="text" class="form-control" name="email" required
-							placeholder="Email">
+							placeholder="Email"><br>
 
-						<div class="text-center">
+						<div class="text-center">	
 							<input type="submit" value="send link on email" class="btn btn-primary">
 						</div>
 					</form>

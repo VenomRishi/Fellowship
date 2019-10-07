@@ -1,4 +1,3 @@
-package com.bridgelabz.controller;
 /******************************************************************************
  *  Purpose: Servlet which is created for login validation in this we are
  *  		 validating user from database whether that user is exist in 
@@ -10,6 +9,9 @@ package com.bridgelabz.controller;
  *  @since   04-10-2019
  *
  ******************************************************************************/
+
+package com.bridgelabz.controller;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
