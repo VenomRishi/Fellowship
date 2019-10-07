@@ -1,3 +1,4 @@
+package com.bridgelabz.filter;
 /******************************************************************************
  *  Purpose: Filter is used to check whether Login page validation is 
  *  		 proper or not

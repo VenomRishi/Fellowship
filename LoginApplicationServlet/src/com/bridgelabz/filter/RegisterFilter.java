@@ -1,3 +1,4 @@
+package com.bridgelabz.filter;
 
 /******************************************************************************
  *  Purpose: Filter is used to check whether registration page validation is 

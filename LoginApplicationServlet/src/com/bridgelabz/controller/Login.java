@@ -1,3 +1,4 @@
+package com.bridgelabz.controller;
 /******************************************************************************
  *  Purpose: Servlet which is created for login validation in this we are
  *  		 validating user from database whether that user is exist in 
@@ -55,6 +56,7 @@ public class Login extends HttpServlet {
 			} else {
 				dao.close();
 				HttpSession session = request.getSession();
+				session.setMaxInactiveInterval(30 * 60);
 				session.setAttribute("username", username);
 				response.sendRedirect("index.jsp");
 //				response.sendRedirect("login.jsp");

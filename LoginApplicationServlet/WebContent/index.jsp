@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -37,6 +36,7 @@
 				<form action="Logout">
 					<div class="text-center" style="margin-bottom: 20px;">
 						<input type="submit" class="btn btn-primary" value="log out">
+						<a href="showdetails.jsp">show all details</a>
 					</div>
 				</form>
 

@@ -106,6 +106,28 @@ public class Dao {
 	}
 
 	/**
+	 * Purpose: method for reading data from database and returning result set
+	 * 
+	 * @param username	input from user
+	 * @return	returns the data in the object of result set
+	 * @throws SQLException           exception is generate if error occur while
+	 *                                creating connection with database
+	 * @throws ClassNotFoundException exception is generate if Class.forName method
+	 *                                does not find the class name
+	 */
+	public ResultSet readAllFromDatabase(String username) throws SQLException, ClassNotFoundException {
+		String query = "SELECT * FROM user WHERE username=?";
+		connection = DbConnection.getConnection();
+		preparedStatement = (PreparedStatement) connection.prepareStatement(query);
+		preparedStatement.setString(1, username);
+
+		ResultSet rs = preparedStatement.executeQuery();
+
+		return rs;
+
+	}
+
+	/**
 	 * Purpose: method for closing all open connection for prepared statement and
 	 * database connection
 	 * 

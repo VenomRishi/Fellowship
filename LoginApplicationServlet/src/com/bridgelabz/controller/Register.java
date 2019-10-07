@@ -1,3 +1,4 @@
+package com.bridgelabz.controller;
 /******************************************************************************
  *  Purpose: Servlet which is created for registering new user into application
  *  		 in this class we are storing new user into database and redirecting
@@ -46,6 +47,7 @@ public class Register extends HttpServlet {
 				if (dao.insertIntoDatabase(user)) {
 					dao.close();
 					HttpSession session = request.getSession();
+					session.setMaxInactiveInterval(30*60);
 					session.setAttribute("username", user.getUsername());
 					response.sendRedirect("index.jsp");
 				}
