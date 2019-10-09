@@ -108,8 +108,8 @@ public class Dao {
 	/**
 	 * Purpose: method for reading data from database and returning result set
 	 * 
-	 * @param username	input from user
-	 * @return	returns the data in the object of result set
+	 * @param username input from user
+	 * @return returns the data in the object of result set
 	 * @throws SQLException           exception is generate if error occur while
 	 *                                creating connection with database
 	 * @throws ClassNotFoundException exception is generate if Class.forName method
@@ -125,6 +125,17 @@ public class Dao {
 
 		return rs;
 
+	}
+
+	public boolean changePassword(String username, String password) throws SQLException, ClassNotFoundException {
+		connection = DbConnection.getConnection();
+		preparedStatement = (PreparedStatement) connection
+				.prepareStatement("UPDATE user SET password=? WHERE username=?");
+		preparedStatement.setString(1, password);
+		preparedStatement.setString(2, username);
+		if (preparedStatement.executeUpdate() == 1)
+			return true;
+		return false;
 	}
 
 	/**
