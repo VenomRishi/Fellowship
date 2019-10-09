@@ -14,11 +14,12 @@ import java.io.PrintWriter;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+
+import com.bridgelabz.service.Util;
 
 /**
  * Servlet Filter implementation class ChangePasswordFilter
@@ -36,13 +37,15 @@ public class ChangePasswordFilter implements Filter {
 		String cpassword = request.getParameter("cpassword");
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		//RequestDispatcher rd = request.getRequestDispatcher("changepassword.jsp");
 
 		if (!password.equals(cpassword)) {
-			out.print("<script>alert('Both password is not matching')</script>");
-			RequestDispatcher rd = request.getRequestDispatcher("changepassword.jsp");
-			rd.include(request, response);
-		} else
+			out.print("<script>alert('Both password is not matching')</script>");			
+		}else if(!Util.validatePassword(password)){
+			out.print("<script>alert('Password is not strong')</script>");
+		}else
 			chain.doFilter(request, response);
+
 		// pass the request along the filter chain
 
 	}

@@ -27,9 +27,13 @@
 					<form action="changepassword" method="get">
 						<input type="hidden" name="email"
 							value="<%=request.getParameter("email")%>"> New password:
-						<input type="password" name="password"> confirm password:
-						<input type="password" name="cpassword"> <input
-							type="submit" value="Change Password">
+						<input class="form-control" type="password" name="password">
+						confirm password: <input class="form-control" type="password"
+							name="cpassword"> <br>
+						<div class="text-center">
+							<input type="submit" value="Change Password"
+								class="btn btn-primary">
+						</div>
 					</form>
 
 				</div>

@@ -30,6 +30,7 @@
 							placeholder="Email"><br>
 
 						<div class="text-center">	
+							<a href="login.jsp">Back to login</a>
 							<input type="submit" value="send link on email" class="btn btn-primary">
 						</div>
 					</form>

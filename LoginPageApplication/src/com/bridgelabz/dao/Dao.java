@@ -127,6 +127,18 @@ public class Dao {
 
 	}
 
+	/**
+	 * Purpose: method for changing the password of user on the basis of mail
+	 * 
+	 * @param username input from user
+	 * @param password input from user
+	 * @return returns true if the password is changed in database else returns
+	 *         false
+	 * @throws SQLException           exception is generate if error occur while
+	 *                                creating connection with database
+	 * @throws ClassNotFoundException exception is generate if Class.forName method
+	 *                                does not find the class name
+	 */
 	public boolean changePassword(String username, String password) throws SQLException, ClassNotFoundException {
 		connection = DbConnection.getConnection();
 		preparedStatement = (PreparedStatement) connection
@@ -136,6 +148,28 @@ public class Dao {
 		if (preparedStatement.executeUpdate() == 1)
 			return true;
 		return false;
+	}
+
+	/**
+	 * Purpose: method for checking the user is there in database or not
+	 * 
+	 * @param username input from user
+	 * @return	returns 1 if user is found in database else return 0
+	 * @throws SQLException           exception is generate if error occur while
+	 *                                creating connection with database
+	 * @throws ClassNotFoundException exception is generate if Class.forName method
+	 *                                does not find the class name
+	 */
+	public int checkUser(String username) throws SQLException, ClassNotFoundException {
+		String query = "SELECT * FROM user WHERE username=?";
+		connection = DbConnection.getConnection();
+		preparedStatement = (PreparedStatement) connection.prepareStatement(query);
+		preparedStatement.setString(1, username);
+
+		ResultSet rs = preparedStatement.executeQuery();
+		if (rs.next())
+			return 1;
+		return 0;
 	}
 
 	/**
