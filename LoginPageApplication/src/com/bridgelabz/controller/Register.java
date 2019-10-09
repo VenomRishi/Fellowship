@@ -1,3 +1,4 @@
+package com.bridgelabz.controller;
 /******************************************************************************
  *  Purpose: Servlet which is created for registering new user into application
  *  		 in this class we are storing new user into database and redirecting
@@ -9,7 +10,6 @@
  *
  ******************************************************************************/
 
-package com.bridgelabz.controller;
 
 
 import java.io.IOException;

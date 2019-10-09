@@ -33,7 +33,7 @@
 							placeholder="Last Name"><br> <input
 							class="form-control" type="text" name="username"
 							required="required" placeholder="Username"><br> <input
-							class="form-control" type="password" name="password typepass"
+							class="form-control" type="password" name="password"
 							required="required" id="typepass" placeholder="Password">
 						<br> <input class="form-control" type="password"
 							name="cpassword" required="required" id="typepass2"

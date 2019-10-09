@@ -11,7 +11,7 @@ public class DbConnection {
 
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/logindb?verifyServerCertificate=false&useSSL=true", "root", "");
+				"jdbc:mysql://localhost:3306/clgdb?verifyServerCertificate=false&useSSL=true", "root", "root");
 
 		return connection;
 	}
