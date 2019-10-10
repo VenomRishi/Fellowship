@@ -29,6 +29,8 @@ import com.bridgelabz.service.Util;
 public class ForgotPasswordFilter implements Filter {
 
 	/**
+	 * Purpose: method is used to filtering the data coming from jsp page
+	 * 
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)

@@ -1,4 +1,5 @@
 package com.bridgelabz.controller;
+
 /******************************************************************************
  *  Purpose: Servlet which is created for registering new user into application
  *  		 in this class we are storing new user into database and redirecting
@@ -10,13 +11,13 @@ package com.bridgelabz.controller;
  *
  ******************************************************************************/
 
-
-
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +37,21 @@ public class Register extends HttpServlet {
 	private Dao dao = new Dao();
 	private User user = new User();
 
+	/**
+	 * Purpose: method for handling the request from jsp page in the form of post
+	 * 
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 * 
+	 * @param request  request from jsp page
+	 * @param response response from jsp page
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+
 		user.setFname(request.getParameter("fname"));
 		user.setLname(request.getParameter("lname"));
 		user.setUsername(request.getParameter("username"));
@@ -50,12 +64,15 @@ public class Register extends HttpServlet {
 				if (dao.insertIntoDatabase(user)) {
 					dao.close();
 					HttpSession session = request.getSession();
-					session.setMaxInactiveInterval(30*60);
+					session.setMaxInactiveInterval(30 * 60);
 					session.setAttribute("username", user.getUsername());
 					response.sendRedirect("index.jsp");
 				}
 			} else {
 				// user already available in database
+				out.print("<script>alert('User already exist in database with this username')</script>");
+				RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
+				rd.include(request, response);
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {

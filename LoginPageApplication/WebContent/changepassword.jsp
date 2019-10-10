@@ -24,7 +24,7 @@
 					style="width: 100%; height: 240px">
 				<div class="card-body">
 					<h4 class="card-title">Forgot password</h4>
-					<form action="changepassword" method="get">
+					<form action="changepassword" method="post">
 						<input type="hidden" name="email"
 							value="<%=request.getParameter("email")%>"> New password:
 						<input class="form-control" type="password" name="password">

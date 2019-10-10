@@ -1,4 +1,3 @@
-
 /******************************************************************************
  *  Purpose: Servlet which is created for sending the email for forgot password
  *  		 operation
@@ -65,7 +64,7 @@ public class ForgotPassword extends HttpServlet {
 					out.print("<script>alert('Password change link send on email')</script>");
 					RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 					rd.include(request, response);
-					//response.sendRedirect("login.jsp");
+					// response.sendRedirect("login.jsp");
 				}
 			} else {
 				System.out.println("Failed in sending mail");
@@ -81,6 +80,11 @@ public class ForgotPassword extends HttpServlet {
 
 	}
 
+	/**
+	 * Purpose: method is created for sending email to recipient
+	 * 
+	 * @return returns 1 if email has been send successful
+	 */
 	private int sendEmail() {
 		to += email;
 		properties = new Properties();
@@ -107,6 +111,15 @@ public class ForgotPassword extends HttpServlet {
 		return 1;
 	}
 
+	/**
+	 * Purpose: method is created for segregating the message which will be added
+	 * into email which is created in this method
+	 * 
+	 * @param session param from sendEmail method
+	 * @param from    input to whom account you want to send email
+	 * @param to      input to whom you want to send email
+	 * @return returns the generated message
+	 */
 	private Message prepareMessage(Session session, String from, String to) {
 		Message message = new MimeMessage(session);
 		try {

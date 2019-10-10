@@ -30,6 +30,9 @@ import com.bridgelabz.service.Util;
 public class RegisterFilter implements Filter {
 
 	/**
+	 * Purpose: this method will used for filtering data which is coming from jsp
+	 * 			page
+	 * 
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)

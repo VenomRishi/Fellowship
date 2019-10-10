@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Purpose: Servlet which is created for changing the password in database
+ *
+ *  @author  Rishikesh Mhatre
+ *  @version 1.0
+ *  @since   09-10-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.controller;
 
 import java.io.IOException;
@@ -27,14 +36,13 @@ public class ChangePassword extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("email");
-		System.out.println("sgajksdgakjsd" + username);
+
 		String password = request.getParameter("cpassword");
-		System.out.println("sgajksdgakjsd" + password);
 		try {
 			if (dao.changePassword(username, password)) {
 				// password is updated now go to index page
