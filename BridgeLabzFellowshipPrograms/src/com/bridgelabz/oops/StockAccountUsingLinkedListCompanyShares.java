@@ -27,7 +27,7 @@ public class StockAccountUsingLinkedListCompanyShares {
 		CompanysharesModel compModel = new CompanysharesModel();
 
 		// paths of files
-		String pathOfCompanyShares = "/home/admin1/eclipse-workspace/BridgeLabzFellowshipPrograms/src/com/bridgelabz/jsonfiles/company_shares.json";
+		String pathOfCompanyShares = "/home/admin1/eclipse-workspace/Fellowship/BridgeLabzFellowshipPrograms/src/com/bridgelabz/jsonfiles/company_shares.json";
 
 		// code for fetching json data and put it into models
 		File file = new File(pathOfCompanyShares);
@@ -82,7 +82,7 @@ public class StockAccountUsingLinkedListCompanyShares {
 						System.out.println(
 								"Company Total value: " + compList.get(indexOfCompany).getCompany_total_value());
 
-						JsonUtil.readMapper(pathOfCompanyShares, compModel);
+						JsonUtil.writeMapper(pathOfCompanyShares, compModel);
 						break;
 					case 2:
 						// for removing shares
@@ -103,7 +103,7 @@ public class StockAccountUsingLinkedListCompanyShares {
 									"Company share price: " + compList.get(indexOfCompany).getCompany_share_price());
 							System.out.println(
 									"Company Total value: " + compList.get(indexOfCompany).getCompany_total_value());
-							JsonUtil.readMapper(pathOfCompanyShares, compModel);
+							JsonUtil.writeMapper(pathOfCompanyShares, compModel);
 						} else
 							System.out.println("Company don't have that much shares to remove");
 

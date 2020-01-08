@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -42,11 +43,15 @@ public class LoginFilter implements Filter {
 		String password = request.getParameter("password");
 
 		System.out.println("In filter");
-		if (username.length() < 5) {
+		if (username.length() > 5 && !Util.validateEmail(username)) {
 			out.print("<script>alert('Invalid username')</script>");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.include(request, response);
 
 		} else if (!Util.validatePassword(password)) {
 			out.print("<script>alert('Invalid password')</script>");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.include(request, response);
 
 		} else
 			chain.doFilter(request, response);
