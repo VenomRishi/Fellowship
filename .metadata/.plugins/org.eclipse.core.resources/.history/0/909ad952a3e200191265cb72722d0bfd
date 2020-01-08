@@ -1,5 +1,0 @@
-package com.bridgelabz.creational.factorypc;
-
-public class Server extends Computer {
-	
-}
